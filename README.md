@@ -18,7 +18,7 @@ It aims to simplify the TARA process with a cleaner interface than legacy tools 
 
 A detailed presentation of the project vision, UI mockups, and roadmap is available here:
 
-👉 [View the Project Deck (PDF)](assets/TARA_UI_Deck.pdf)
+👉 [View the Project Deck (PDF)](assets/Sentinel_Deck.pdf)
 
 ---
 
