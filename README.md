@@ -2,6 +2,8 @@
 
 **Status:** In Design Phase  
 
+![](assets/RESIDUAL_RISK.png)
+
 ---
 
 ## 🎯 Project Goal
