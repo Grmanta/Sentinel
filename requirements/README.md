@@ -57,11 +57,11 @@
   <tr><td>RQ_BCK_AF_10</td><td>Attack feasibility rating based on attack potential:<br><b>High:</b> 0–13<br><b>Medium:</b> 14–19<br><b>Low:</b> 20–24<br><b>Very Low:</b> ≥25</td></tr>
 
   <tr><th colspan="2">RQ_BCK_RD_XX</th></tr>
-  <tr><td>RQ_BCK_RD_01</td><td>For each threat scenario, the risk value shall be determined from:<br>• Impact of the associated damage scenarios<br>• Attack feasibility of the associated attack paths<br><br><i>Note 1:</i> If multiple damage scenarios or multiple impact categories exist, determine separate risk values.<br><i>Note 2:</i> If multiple attack paths exist, assign the maximum attack feasibility rating.</td></tr>
+  <tr><td>RQ_BCK_RD_01</td><td>For each threat scenario, the risk value shall be determined from:<br>• Impact of the associated damage scenarios<br>• Attack feasibility of the associated attack paths<br><br><i>Note 1: If multiple damage scenarios or multiple impact categories exist, determine separate risk values.</i><br><i>Note 2: If multiple attack paths exist, assign the maximum attack feasibility rating.</i></td></tr>
   <tr><td>RQ_BCK_RD_02</td><td>The risk value of a threat scenario shall be a value between 1 and 5, where 1 represents minimal risk.</td></tr>
   <tr><td>RQ_BCK_RD_03
   </td><td>
-  The method for risk value determination shall be based on the following risk matrix: 
+  The method for risk value determination shall be based on the following risk matrix: <br><br> 
     <table border="1" cellspacing="0" cellpadding="5" style="border-collapse: collapse; text-align: center;">
       <thead>
         <tr>
