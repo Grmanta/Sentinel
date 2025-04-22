@@ -59,8 +59,54 @@
   <tr><th colspan="2">RQ_BCK_RD_XX</th></tr>
   <tr><td>RQ_BCK_RD_01</td><td>For each threat scenario, the risk value shall be determined from:<br>• Impact of the associated damage scenarios<br>• Attack feasibility of the associated attack paths<br><br><i>Note 1:</i> If multiple damage scenarios or multiple impact categories exist, determine separate risk values.<br><i>Note 2:</i> If multiple attack paths exist, assign the maximum attack feasibility rating.</td></tr>
   <tr><td>RQ_BCK_RD_02</td><td>The risk value of a threat scenario shall be a value between 1 and 5, where 1 represents minimal risk.</td></tr>
-  <tr><td>RQ_BCK_RD_03</td><td>The method for risk value determination shall be based on the following risk matrix: 
-  <img src="https://github.com/Grmanta/Sentinel/blob/main/assets/AF_RATING.png" style="max-width:100%; height:auto;"> </td></tr>
+  <tr><td>RQ_BCK_RD_03
+  </td><td>
+  The method for risk value determination shall be based on the following risk matrix: 
+    <table border="1" cellspacing="0" cellpadding="5" style="border-collapse: collapse; text-align: center;">
+      <thead>
+        <tr>
+          <th rowspan="2">Impact rating</th>
+          <th colspan="4">Attack feasibility rating</th>
+        </tr>
+        <tr>
+          <th>Very Low</th>
+          <th>Low</th>
+          <th>Medium</th>
+          <th>High</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Severe</td>
+          <td><b>2</b></td>
+          <td><b>3</b></td>
+          <td><b>4</b></td>
+          <td><b>5</b></td>
+        </tr>
+        <tr>
+          <td>Major</td>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>Moderate</td>
+          <td>1</td>
+          <td>2</td>
+          <td>2</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>Negligible</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+        </tr>
+      </tbody>
+    </table>
+  </td></tr>
 
   <tr><th colspan="2">RQ_BCK_RT_XX</th></tr>
   <tr><td>RQ_BCK_RT_01</td><td>For each threat scenario, considering its risk values, one or more of the following risk treatment option(s) shall be determined:<br>• Avoiding risk<br>• Reducing risk<br>• Sharing risk<br>• Retaining risk</td></tr>
@@ -71,4 +117,56 @@
 
   <tr><th colspan="2">RQ_BCK_RR_XX</th></tr>
   <tr><td>RQ_BCK_RR_01</td><td>When an attack path has two attack feasibility ratings, each related threat scenario shall be assigned a residual risk value for every associated damage scenario and impacted categories.</td></tr>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+    <tr><th colspan="2">RQ_FRT_COVER_XX</th></tr> 
+    <tr><td>RQ_FRT_COVER_01</td><td>The cover’s background shall comply with the hexadecimal color #14142B.</td></tr>
+    <tr><td>RQ_FRT_COVER_02</td><td>The cover shall display the software name in the Zen Tokyo Zoo font.</td></tr>
+    <tr><td>RQ_FRT_COVER_03</td><td>The software name shall comply with a color gradient composed from #B28DFF to #A8C7FA.</td></tr>
+    <tr><td>RQ_FRT_COVER_04</td><td>The cover shall display the software slogan in the software’s primary font.</td></tr>
+    <tr><td>RQ_FRT_COVER_05</td><td>The software slogan shall comply with the hexadecimal color #D4E4FF.</td></tr>
+    <tr><td>RQ_FRT_COVER_06</td><td>The font size of the title shall be 7.5 times the slogan's font size, maintaining visual hierarchy.</td></tr>
+    <tr><td>RQ_FRO_COVER_07</td><td>The cover shall include a button that prompts the user to click it to load the main menu.</td></tr>
+    <tr><td>RQ_FRT_COVER_08</td><td>The button text shall have the same font size as the slogan.</td></tr>
+    <tr><td>RQ_FRT_COVER_09</td><td>The button size shall be centered around the text, with appropriate padding.</td></tr>
+    <tr><td>RQ_FRT_COVER_10</td><td>The color button shall comply with a color gradient composed from #B28DFF to #A8C7FA.</td></tr>
+    <tr><td>RQ_FRT_COVER_11</td><td>The text button color comply with the hexadecimal color #D4E4FF.</td></tr>
+    <tr><td>RQ_FRT_COVER_12</td><td>The software name, slogan, and button shall be vertically aligned and centrally positioned within the cover.</td></tr>
+    <tr><th colspan="2">RQ_FRT_VPANEL_XX</th></tr> 
+    <tr><td>RQ_FRT_VPANEL_01</td><td></td></tr>
+    <tr><th colspan="2">RQ_FRT_HPANEL_XX</th></tr>
+    <tr><td>RQ_FRT_HPANEL_01</td><td></td></tr>
+    <tr><th colspan="2">RQ_FRT_TBAR_XX</th></tr>
+    <tr><td>RQ_FRT_TBAR_01</td><td></td></tr>
+    <tr><th colspan="2">RQ_FRT_MENU_XX</th></tr>
+    <tr><td>RQ_FRT_MENU_01</td><td></td></tr>
+    <tr><th colspan="2">RQ_FRT_ITDEF_XX</th></tr>
+    <tr><td>RQ_FRT_ITDEF_01</td><td></td></tr>
+    <tr><th colspan="2">RQ_FRT_AS_XX</th></tr>
+    <tr><td>RQ_FRT_AS_01</td><td></td></tr>
+    <tr><th colspan="2">RQ_FRT_TS_XX</th></tr>
+    <tr><td>RQ_FRT_TS_01</td><td></td></tr>
+    <tr><th colspan="2">RQ_FRT_DS_XX</th></tr>
+    <tr><td>RQ_FRT_DS_01</td><td></td></tr>
+    <tr><th colspan="2">RQ_FRT_IR_XX</th></tr>
+    <tr><td>RQ_FRT_IR_01</td><td></td></tr>
+    <tr><th colspan="2">RQ_FRT_AP_XX</th></tr>
+    <tr><td>RQ_FRT_AP_01</td><td></td></tr>
+    <tr><th colspan="2">RQ_FRT_AF_XX</th></tr>
+    <tr><td>RQ_FRT_AF_01</td><td></td></tr>
+    <tr><th colspan="2">RQ_FRT_RD_XX</th></tr>
+    <tr><td>RQ_FRT_RD_01</td><td></td></tr>
+    <tr><th colspan="2">RQ_FRT_RT_XX</th></tr>
+    <tr><td>RQ_FRT_RT_01</td><td></td></tr>
+    <tr><th colspan="2">RQ_FRT_MIT_XX</th></tr>
+    <tr><td>RQ_FRT_MIT_01</td><td></td></tr>
+    <tr><th colspan="2">RQ_FRT_RR_XX</th></tr>
+    <tr><td>RQ_FRT_RR_01</td><td></td></tr>
 </table>
