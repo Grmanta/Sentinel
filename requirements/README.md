@@ -1,3 +1,5 @@
+## Back-End requirements
+
 <table>
   <tr><th colspan="2">RQ_BCK_MENU_XX</th></tr>
   <tr><td>RQ_BCK_MENU_01</td><td>Any created or uploaded project shall be saved in real time.</td></tr>
@@ -9,7 +11,7 @@
   <tr><td>RQ_BCK_ITDEF_03</td><td>All elements mentioned in RQ_BCK_ITDEF_02 shall be definable as assets for the TARA.</td></tr>
   <tr><td>RQ_BCK_ITDEF_04</td><td>A basic component shall be a drawable element without logical or hardware functionality.</td></tr>
   <tr><td>RQ_BCK_ITDEF_05</td><td>A basic component shall be nameable, connectable and able to store data.</td></tr>
-  <tr><td>RQ_BCK_ITDEF_06</td><td>Data storage shall be characterized by a time parameter.<br><i>Note: This allows defining a transiting data or the type of memory to be created.</i></td></tr>
+  <tr><td>RQ_BCK_ITDEF_06</td><td>Data storage shall be characterized by a time parameter.<br><br>Note: This allows defining a transiting data or the type of memory.</td></tr>
   <tr><td>RQ_BCK_ITDEF_07</td><td>A composite shall be built from basic components which are customizable according to RQ_BCK_ITDEF_04 and RQ_BCK_ITDEF_05.</td></tr>
   <tr><td>RQ_BCK_ITDEF_08</td><td>A composite shall be saved in a composite library.</td></tr>
   <tr><td>RQ_BCK_ITDEF_09</td><td>All elements mentioned in RQ_BCK_ITDEF_02 shall be associated with a TARA asset.</td></tr>
@@ -19,26 +21,87 @@
   <tr><td>RQ_BCK_TARA_02</td><td>Each element of the TARA (asset, damage scenario, threat scenario, attack path) shall be saved in a corresponding list (assets list, damage scenarios list, etc).</td></tr>
 
   <tr><th colspan="2">RQ_BCK_AS_XX</th></tr>
-  <tr><td>RQ_BCK_AS_01</td><td>An asset shall include the following attributes:<br>• ID, <br>• Name, <br>• Priority, <br>• Confidentiality, <br>• Integrity, <br>• Availability, <br>• Authenticity, <br>• Non-repudiation, <br>• Item Definition Component, <br>• Threat Scenarios, <br>• Damage Scenarios, <br>• Cybersecurity Controls.</td></tr>
+  <tr><td>RQ_BCK_AS_01</td><td>An asset shall include the following attributes:
+  <br>• ID: Unique identifier of the asset.
+  <br>• Name: Descriptive name of the asset.
+  <br>• Priority: Importance level of the asset.
+  <br>• Confidentiality: Either the asset is concerned or not.
+  <br>• Integrity: Either the asset is concerned or not.
+  <br>• Availability: Either the asset is concerned or not.
+  <br>• Authenticity: Either the asset is concerned or not.
+  <br>• Non-repudiation: Either the asset is concerned or not.
+  <br>• Item Definition Component: The system component to which the asset belongs.
+  <br>• Threat Scenarios: The potential cause of a damage scenario.
+  <br>• Damage Scenarios: The potential consequences resulting from the threat scenario.
+  <br>• Cybersecurity Controls: Security measures applied to protect the asset.</td></tr>
   <tr><td>RQ_BCK_AS_02</td><td>An asset shall be initialized with at least an ID and a name.</td></tr>
 
   <tr><th colspan="2">RQ_BCK_TS_XX</th></tr>
-  <tr><td>RQ_BCK_TS_01</td><td>A threat scenario shall include the following attributes:<br>• ID, <br>• Description, <br>• Affected Assets, <br>• Compromised Cybersecurity Properties, <br>• Related Damage Scenarios, <br>• Attack Paths, <br>• Risk Values, <br>• Treatments.</td></tr>
+  <tr><td>RQ_BCK_TS_01</td><td>A threat scenario shall include the following attributes:
+  <br>• ID: Unique identifier of the threat scenario.
+  <br>• Description: Detailed explanation of the threat scenario.
+  <br>• Assets: The assets affected by the threat.
+  <br>• Compromised Cybersecurity Properties: The impacted security properties.
+  <br>• Damage Scenarios: The potential consequences resulting from the threat scenario.
+  <br>• Attack Paths: The possible attack vectors used to exploit the threat.
+  <br>• Risk Values and Treatments: The assessed risk levels and corresponding treatment strategies. </td></tr>
   <tr><td>RQ_BCK_TS_02</td><td>A threat scenario shall be initialized with at least an ID and a description.</td></tr>
 
   <tr><th colspan="2">RQ_BCK_DS_XX</th></tr>
-  <tr><td>RQ_BCK_DS_01</td><td>A damage scenario shall have the following attributes: <br>• ID, <br>• Description, <br>• Assets, <br>• Threat Scenarios <br>• Various impact ratings (Safety, Financial, Operational, Privacy).</td></tr>
+  <tr><td>RQ_BCK_DS_01</td><td>A damage scenario shall have the following attributes:
+  <br>• ID: Unique identifier of the damage scenario.
+  <br>• Description: Detailed explanation of the damage scenario.
+  <br>• Assets: The assets affected the damage.
+  <br>• Threat Scenarios: The potential cause of a damage scenario.
+  <br>• Safety impact: Rating of the safety impact.
+  <br>• Safety residual impact: Rating of the safety residual impact.
+  <br>• Financial impact: Rating of the financial impact.
+  <br>• Financial residual  impact: Rating of the financial residual impact.
+  <br>• Operational impact: Rating of the operational impact.
+  <br>• Operational residual impact: Rating of the operational residual impact.
+  <br>• Privacy impact: Rating of the privacy impact.
+  <br>• Privacy residual impact: Rating of the privacy residual impact. </td></tr>
   <tr><td>RQ_BCK_DS_02</td><td>A damage scenario shall be initialized with at least an ID and a description.</td></tr>
 
   <tr><th colspan="2">RQ_BCK_IR_XX</th></tr>
   <tr><td>RQ_BCK_IR_01</td><td>The impact rating of a damage scenario shall be assigned a single value among the following:<br>•  Severe<br>•  Major<br>•  Moderate<br>•  Negligible</td></tr>
-  <tr><td>RQ_BCK_IR_02</td><td>The criteria for safety impact shall be defined as follows:<br>• <b>Severe:</b> Life-threatening injuries (survival uncertain), fatal injuries.<br>• <b>Major:</b> Severe and life-threatening injuries (survival probable).<br>• <b>Moderate:</b> Light and moderate injuries.<br>• <b>Negligible:</b> No injuries.</td></tr>
-  <tr><td>RQ_BCK_IR_03</td><td>The criteria for financial impact shall be defined as follows:<br>• <b>Severe:</b> Catastrophic financial consequences.<br>• <b>Major:</b> Substantial financial consequences.<br>• <b>Moderate:</b> Inconvenient financial consequences with limited resources.<br>• <b>Negligible:</b> No or negligible financial effect.</td></tr>
-  <tr><td>RQ_BCK_IR_04</td><td>The criteria for operational impact shall be defined as follows:<br>• <b>Severe:</b> Loss or impairment of a core vehicle function.<br>• <b>Major:</b> Loss or impairment of an important function.<br>• <b>Moderate:</b> Partial degradation of a function.<br>• <b>Negligible:</b> No or imperceptible impairment.</td></tr>
-  <tr><td>RQ_BCK_IR_05</td><td>The criteria for privacy impact shall be defined as follows:<br>• <b>Severe:</b> Significant/irreversible impact. Highly sensitive and linkable to PII.<br>• <b>Major:</b> Serious impact, either:<br>&nbsp;&nbsp;a) highly sensitive, hard to link; or<br>&nbsp;&nbsp;b) sensitive, easy to link.<br>• <b>Moderate:</b> Inconvenient impact, either:<br>&nbsp;&nbsp;a) sensitive, hard to link; or<br>&nbsp;&nbsp;b) not sensitive, easy to link.<br>• <b>Negligible:</b> No/negligible impact. Not sensitive and hard to link.</td></tr>
+  <tr><td>RQ_BCK_IR_02</td><td>The criteria for safety impact shall be defined as follows:<br>• Severe:</b> Life-threatening injuries (survival uncertain), fatal injuries.<br>• Major:</b> Severe and life-threatening injuries (survival probable).<br>• Moderate:</b> Light and moderate injuries.<br>• Negligible:</b> No injuries.</td></tr>
+  <tr><td>RQ_BCK_IR_03</td><td>The criteria for financial impact shall be defined as follows:
+  <br>• Severe:</b> The financial damage leads to catastrophic consequences which the affected road user might not overcome.
+  <br>• Major:</b> The financial damage leads to substantial consequences which the affected road user will be able to overcome.
+  <br>• Moderate:</b> The financial damage leads to inconvenient consequences which the affected road user will be able to overcome with limited resources.
+  <br>• Negligible:</b> The financial damage leads to no effect, negligible consequences or is irrelevant to the road user.</td></tr>
+  <tr><td>RQ_BCK_IR_04</td><td>The criteria for operational impact shall be defined as follows:
+  <br>• Severe:</b> The operational damage leads to the loss or impairment of a core vehicle function.
+  <br>• Major:</b> The operational damage leads to the loss or impairment of an important vehicle function.
+  <br>• Moderate:</b> The operational damage leads to partial degradation of a vehicle function.
+  <br>• Negligible:</b> The operational damage leads to no impairment or non-perceivable impairment of a vehicle function.</td></tr>
+  <tr><td>RQ_BCK_IR_05</td><td>The criteria for privacy impact shall be defined as follows:
+  <br>• Severe:</b> The privacy damage leads to significant or even irreversible impact to the road user. The information regarding the road user is highly sensitive and easy to link to a PII principal
+  <br>• Major:</b> The privacy damage leads to serious impact to the road user. The information regarding the road user is:<br>&nbsp;&nbsp;a) highly sensitive and difficult to link to a PII    
+     principal; or<br>&nbsp;&nbsp;b) sensitive and easy to link to a PII principal.
+  <br>• Moderate:</b> The privacy damage leads to inconvenient consequences to the road user. The information regarding the road user is:<br>&nbsp;&nbsp;a) sensitive but difficult to link to a PII principal; or<br>&nbsp;&nbsp;b) not sensitive but easy to link to a PII principal.
+  <br>• Negligible:</b> The privacy damage leads to no effect or, negligible consequences or is irrelevant to the road user. The information regarding the road user is not sensitive and difficult to link to a PII principal.</td></tr>
 
   <tr><th colspan="2">RQ_BCK_AP_XX</th></tr>
-  <tr><td>RQ_BCK_AP_01</td><td>An attack path shall have the following attributes:<br>• ID<br>• Attack steps<br>• Threat scenario<br>•  Elapsed time<br>•  Specialist expertise<br>•  Knowledge of the item or the component<br>•  Window of opportunity<br>•  Equipment<br>•  Attack feasibility value<br>•  Attack feasibility rating<br>•  Residual elapsed time<br>•  Residual specialist expertise<br>•  Residual knowledge<br>•  Residual window of opportunity<br>•  Residual equipment<br>•  Residual attack feasibility value<br>•  Residual attack feasibility rating</td></tr>
+  <tr><td>RQ_BCK_AP_01</td><td>An attack path shall have the following attributes:
+  <br>• ID: Unique identifier of the damage scenario.
+  <br>• Attack steps: Different ways in which a threat scenario could be realized.
+  <br>• Threat scenario: The potential cause of a damage scenario.
+  <br>•  Elapsed time: Time to identify a vulnerability and develop and (successfully) apply an exploit.
+  <br>•  Specialist expertise: Capabilities of the attacker, relative to their skill and experience
+  <br>•  Knowledge of the item: Amount of information the attacker has acquired about the item or component.
+  <br>•  Window of opportunity: Access conditions (time, type) to successfully perform an attack.
+  <br>•  Equipment: Tools the attacker has available to discover the vulnerability and/or to execute the attack.
+  <br>•  Attack feasibility value: Addition of all parameter values.
+  <br>•  Attack feasibility rating: Rating corresponding to the attack feasibility value.
+  <br>•  Residual elapsed time: New time to identify a vulnerability and develop and (successfully) apply an exploit.
+  <br>•  Residual specialist expertise: New required capabilities of the attacker, relative to their skill and experience.
+  <br>•  Residual knowledge: New amount of information the attacker has acquired about the item or component.
+  <br>•  Residual window of opportunity: New access conditions (time, type) to successfully perform an attack.
+  <br>•  Residual equipment: Additional tools the attacker has available to discover the vulnerability and/or to execute the attack.
+  <br>•  Residual attack feasibility value:  Addition of all residual parameter values.
+  <br>•  Residual attack feasibility rating: Rating corresponding to the residual attack feasibility value.</td></tr>
   <tr><td>RQ_BCK_AP_2</td><td>An attack step shall be associated with one attack path.</td></tr>
   <tr><td>RQ_BCK_AP_03</td><td>An attack step shall have the following attributes:<br>• ID<br>• Description<br>• Associated attack path</td></tr>
   <tr><td>RQ_BCK_AP_04</td><td>An attack step shall be initialized with all its attributes.</td></tr>
@@ -47,65 +110,87 @@
   <tr><th colspan="2">RQ_BCK_AF_XX</th></tr>
   <tr><td>RQ_BCK_AF_01</td><td>The attack feasibility rating of an attack path shall be assigned a single value among the following:<br>• High<br>• Medium<br>• Low<br>• Very low</td></tr>
   <tr><td>RQ_BCK_AF_02</td><td>The attack feasibility shall be determined using an attack potential-based approach.</td></tr>
-  <tr><td>RQ_BCK_AF_03</td><td>The attack potential-based approach shall rely on five core parameters:<br>• Elapsed time<br>• Specialist expertise<br>• Knowledge of the item or component<br>• Window of opportunity<br>• Equipment</td></tr>
-  <tr><td>RQ_BCK_AF_04</td><td>Criteria and values for elapsed time:<br>(0) ≤1 day<br>(1) ≤1 week<br>(4) ≤1 month<br>(17) ≤6 months<br>(19) >6 months</td></tr>
-  <tr><td>RQ_BCK_AF_05</td><td>Criteria and values for specialist expertise:<br>(0) Layman<br>(3) Proficient<br>(6) Expert<br>(8) Multiple experts</td></tr>
-  <tr><td>RQ_BCK_AF_06</td><td>Criteria and values for knowledge of the item/component:<br>(0) Public information<br>(3) Restricted information<br>(7) Confidential information<br>(11) Strictly confidential information</td></tr>
-  <tr><td>RQ_BCK_AF_07</td><td>Criteria and values for window of opportunity:<br>(0) Unlimited<br>(1) Easy<br>(4) Moderate<br>(10) Difficult</td></tr>
-  <tr><td>RQ_BCK_AF_08</td><td>Criteria and values for equipment:<br>(0) Standard<br>(4) Specialized<br>(7) Bespoke<br>(9) Multiple bespoke</td></tr>
+  <tr><td>RQ_BCK_AF_03</td><td>The attack-potentiel-based approach shall rely on five core parameters:
+  <br>• Elapsed time: Time to identify a vulnerability and develop and (successfully) apply an exploit.
+  <br>• Specialist expertise: Capabilities of the attacker, relative to their skill and experience
+  <br>• Knowledge of the item or component: Amount of information the attacker has acquired about the item or component.
+  <br>• Window of opportunity: Access conditions (time, type) to successfully perform an attack.
+  <br>• Equipment: Tools the attacker has available to discover the vulnerability and/or to execute the attack.</td></tr>
+  <tr><td>RQ_BCK_AF_04</td><td>The criteria (and corresponding values) for elapsed time shall be defined as follows:<br>(0) ≤1 day<br>(1) ≤1 week<br>(4) ≤1 month<br>(17) ≤6 months<br>(19) >6 months</td></tr>
+  <tr><td>RQ_BCK_AF_05</td><td>The criteria (and corresponding values) for specialist expertise shall be defined as follows:
+  <br>(0) Layman: Unknowledgeable compared to experts or proficient persons, with no particular expertise.
+  <br>(3) Proficient: Knowledgeable in that they are familiar with the security behaviour of the product or system type.
+  <br>(6) Expert: Familiar with the underlying algorithms, protocols, hardware, structures, security behaviour, principles and concepts of security employed, techniques and tools for the definition of new attacks, cryptography, classical attacks for the product type, attack methods, etc. implemented in the product or system type.
+  <br>(8) Multiple experts: Different fields of expertise are required at an expert level for distinct steps of an attack.</td></tr>
+  <tr><td>RQ_BCK_AF_06</td><td>The criteria (and corresponding values) for knowledge of the item or component shall be defined as follows:
+  <br>(0) Public information: Public information concerning the item or component (e.g. as gained from the Internet).
+  <br>(3) Restricted information: Restricted information concerning the item or component (e.g. knowledge that is controlled within the developer organization and shared with other organizations under a non-disclosure agreement).
+  <br>(7) Confidential information: Confidential information about the item or component (e.g. knowledge that is shared between discrete teams within the developer organization, access to which is constrained only to members of the specified teams).
+  <br>(11) Strictly confidential information: Strictly confidential information about the item or component (e.g. knowledge that is known by only a few individuals, access to which is very tightly controlled on a strict need to know basis and individual undertaking).</td></tr>
+  <tr><td>RQ_BCK_AF_07</td><td>The criteria (and corresponding values) for window of opportunity shall be defined as follows:
+  <br>(0) Unlimited: High availability via public/untrusted network without any time limitation (i.e. asset is always accessible). Remote access without physical presence or time limitation as well as unlimited physical access to the item or component.
+  <br>(1) Easy: High availability and limited access time. Remote access without physical presence to the item or component.
+  <br>(4) Moderate: Low availability of the item or component. Limited physical and/or logical access. Physical access to the vehicle interior or exterior without using any special tools.
+  <br>(10) Difficult: Very low availability of the item or component. Impractical level of access to the item or component to perform the attack.</td></tr>
+  <tr><td>RQ_BCK_AF_08</td><td>The criteria (and corresponding values) for equipment shall be defined as follows:
+  <br>(0) Standard: Equipment is readily available to the attacker. This equipment can be a part of the product itself (e.g. a debugger in an operating system), or can be readily obtained (e.g. internet sources, protocol analyser or simple attack scripts).
+  <br>(4) Specialized: Equipment is not readily available to the attacker but can be acquired without undue effort. This can include purchase of moderate amounts of equipment (e.g. power analysis tools, use of hundreds of PCs linked across the internet would fall into this category), or development of more extensive attack scripts or programs. If clearly different test benches consisting of specialized equipment are required for distinct steps of an attack this would be rated as bespoke.
+  <br>(7) Bespoke: Equipment is specially produced (e.g. very sophisticated software) and not readily available to the public (e.g. black market), or the equipment is so specialized that its distribution is controlled, possibly even restricted. Alternatively, the equipment is very expensive.
+  <br>(9) Multiple bespoke: Is introduced to allow for a situation, where different types of bespoke equipment are required for distinct steps of an attack.</td></tr>
   <tr><td>RQ_BCK_AF_09</td><td>The attack potential shall correspond to the addition of all parameters.</td></tr>
-  <tr><td>RQ_BCK_AF_10</td><td>Attack feasibility rating based on attack potential:<br><b>High:</b> 0–13<br><b>Medium:</b> 14–19<br><b>Low:</b> 20–24<br><b>Very Low:</b> ≥25</td></tr>
+  <tr><td>RQ_BCK_AF_10</td><td>The attack feasibility rating shall be determined based on the following attack potential ranges:<br>High: Attack potential between 0 and 13.<br>Medium: Attack potential between 14 and 19.<br>Low: Attack potential between 20 and 24.<br>Very Low: Attack potential greater than 25.</td></tr>
 
   <tr><th colspan="2">RQ_BCK_RD_XX</th></tr>
-  <tr><td>RQ_BCK_RD_01</td><td>For each threat scenario, the risk value shall be determined from:<br>• Impact of the associated damage scenarios<br>• Attack feasibility of the associated attack paths<br><br><i>Note 1: If multiple damage scenarios or multiple impact categories exist, determine separate risk values.</i><br><i>Note 2: If multiple attack paths exist, assign the maximum attack feasibility rating.</i></td></tr>
-  <tr><td>RQ_BCK_RD_02</td><td>The risk value of a threat scenario shall be a value between 1 and 5, where 1 represents minimal risk.</td></tr>
+  <tr><td>RQ_BCK_RD_01</td><td>For each threat scenario, the risk value shall be determined from the impact of the associated damage scenarios and the attack feasibility of the associated attack paths.<br><br>Note 1: If a threat scenario corresponds to more than one damage scenario and/or an associated damage scenario has impacts in more than one impact category, a separate risk value can be determined separately for each of those impact ratings.<br>Note 2: If the threat scenario corresponds to more than one attack path, the threat scenario can be assigned the maximum of the attack feasibility ratings of the corresponding attack paths.</td></tr>
+  <tr><td>RQ_BCK_RD_02</td><td>The risk value of a threat scenario shall be a value between (and including) 1 and 5, where a value of 1 represents minimal risk.</td></tr>
   <tr><td>RQ_BCK_RD_03
   </td><td>
   The method for risk value determination shall be based on the following risk matrix: <br><br> 
-    <table border="1" cellspacing="0" cellpadding="5" style="border-collapse: collapse; text-align: center;">
-      <thead>
-        <tr>
-          <th rowspan="2">Impact rating</th>
-          <th colspan="4">Attack feasibility rating</th>
-        </tr>
-        <tr>
-          <th>Very Low</th>
-          <th>Low</th>
-          <th>Medium</th>
-          <th>High</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Severe</td>
-          <td><b>2</b></td>
-          <td><b>3</b></td>
-          <td><b>4</b></td>
-          <td><b>5</b></td>
-        </tr>
-        <tr>
-          <td>Major</td>
-          <td>1</td>
-          <td>2</td>
-          <td>3</td>
-          <td>4</td>
-        </tr>
-        <tr>
-          <td>Moderate</td>
-          <td>1</td>
-          <td>2</td>
-          <td>2</td>
-          <td>3</td>
-        </tr>
-        <tr>
-          <td>Negligible</td>
-          <td>1</td>
-          <td>1</td>
-          <td>1</td>
-          <td>1</td>
-        </tr>
-      </tbody>
-    </table>
+  <table border="1" cellspacing="0" cellpadding="5" style="border-collapse: collapse; text-align: center;">
+    <thead>
+      <tr>
+        <th colspan="2" rowspan="2"></th>
+        <th colspan="4"><b>Attack Feasibility Rating</b></th>
+      </tr>
+      <tr>
+        <th><b>Very Low</b></th>
+        <th><b>Low</b></th>
+        <th><b>Medium</b></th>
+        <th><b>High</b></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="4" style="vertical-align: middle;"><b>Impact Rating</b></td>
+        <td><b>Severe</b></td>
+        <td><b>2</b></td>
+        <td><b>3</b></td>
+        <td><b>4</b></td>
+        <td><b>5</b></td>
+      </tr>
+      <tr>
+        <td><b>Major</b></td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td><b>Moderate</b></td>
+        <td>1</td>
+        <td>2</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td><b>Negligible</b></td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+      </tr>
+    </tbody>
+  </table>
   </td></tr>
 
   <tr><th colspan="2">RQ_BCK_RT_XX</th></tr>
@@ -119,13 +204,9 @@
   <tr><td>RQ_BCK_RR_01</td><td>When an attack path has two attack feasibility ratings, each related threat scenario shall be assigned a residual risk value for every associated damage scenario and impacted categories.</td></tr>
 </table>
 
+## Front-End requirements
+
 <table>
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Description</th>
-    </tr>
-  </thead>
     <tr><th colspan="2">RQ_FRT_COVER_XX</th></tr> 
     <tr><td>RQ_FRT_COVER_01</td><td>The cover’s background shall comply with the hexadecimal color #14142B.</td></tr>
     <tr><td>RQ_FRT_COVER_02</td><td>The cover shall display the software name in the Zen Tokyo Zoo font.</td></tr>
