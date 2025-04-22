@@ -13,6 +13,9 @@ This project serves both as:
 ---
 
 **Status:** In Design Phase  
+
+--- 
+
 A detailed presentation of the project vision, UI mockups, and roadmap is available here: [Project Deck](assets/Sentinel_Deck.pdf)
 
 ## Project Goal
